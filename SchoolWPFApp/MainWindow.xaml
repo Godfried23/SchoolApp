@@ -37,6 +37,6 @@
         <TextBox x:Name="txtPhone" Margin="0,5,0,5" Height="40" Width="200" Grid.Row="5" Grid.Column="1"></TextBox>
         <TextBox x:Name="txtTwitter" Margin="0,5,0,5" Height="40" Width="200" Grid.Row="6" Grid.Column="1"></TextBox>
 
-        <Button x:Name="btnPushToTest" Margin="0,5,0,5" Grid.Row="7" Grid.Column="1">Push to Test</Button>
+        <Button x:Name="btnPushToTest" Margin="0,5,0,5" Grid.Row="7" Grid.Column="1" Click="btnPushToTest_Click">Push to Test</Button>
     </Grid>
 </Window>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 
 namespace SchoolLibrary
@@ -13,19 +12,20 @@ namespace SchoolLibrary
         public string Zip { get; set; }
         public string PhoneNumber { get; set; }
 
-        private string _twitterAddress; //backing variable
+        private string _twitterAddress;
         public string TwitterAddress
         {
-            //make sure the twitter address starts with @
+            //make sure the twitter adderss starts with @
             get { return _twitterAddress; }
             set
             {
                 if (value.StartsWith("@"))
                 {
                     _twitterAddress = value;
-                } else
+                }
+                else
                 {
-                    throw new Exception("The Twitter address must begin with @");
+                    throw new Exception("The twitter address must begin with @");
                 }
             }
         }
@@ -48,8 +48,6 @@ namespace SchoolLibrary
         //    return result;
         //}
 
-        //function bodied expression
-        //generally should only be used for very simple logic, like what is being done here
         public static float AverageThreeScores(float a, float b, float c) => (a + b + c) / 3;
 
         public static int AverageThreeScores(int a, int b, int c)
@@ -62,12 +60,13 @@ namespace SchoolLibrary
         {
             var sb = new StringBuilder();
             sb.AppendLine(Name);
-            sb.AppendLine(Address);
-            sb.AppendLine(City);
+            sb.AppendLine(this.Address);
+            sb.Append(City);
             sb.Append(", ");
             sb.Append(State);
-            sb.Append(" ");
+            sb.Append("  ");
             sb.Append(Zip);
+
             return sb.ToString();
         }
     }
